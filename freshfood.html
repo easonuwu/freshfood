@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fresh Food Inc.</title>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+        <link rel="icon" type="image/x-icon" href="logo.ico">
+    </head>
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: 'Segoe UI';
+            box-sizing: border-box;
+        }
+
+        .outer-container {
+            gap: 20px;
+        }
+
+        .container {
+            margin-left: 15vw;
+            padding-left: 5vw;
+        }
+
+        .container .middle {
+            padding: 30px;
+            height: 100vh;
+        }
+
+
+        .side{
+            position: fixed;
+            padding: 30px;
+            max-width: 9vw;
+            height: 100vh;
+            top: 0;
+            border-right: 1px rgb(159, 159, 159) solid;
+        }
+
+        /* stuff */
+        .menu-main {
+            font-weight: bold;
+            font-size: 200%;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            font-size: 140%;
+        }
+
+        li {
+            font-family: 'Segoe UI';
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .story {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            /* overflow: hidden; */
+            gap: 15px;
+        }
+
+        .story div{
+            width: 100px;
+            height: 120px;
+            text-align: center;
+        }
+
+        
+        .mochi{
+            background-image: url("https://media.discordapp.net/attachments/952160394191974430/1201163184984297614/IMG_1293.jpg?ex=65c8d163&is=65b65c63&hm=65e59ed251385dcdad11cd8ac5eefac29e1ad703d05cae09819f3548ce24ac16&=&format=webp&width=467&height=440");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        .faust{
+            background-image: url("https://media.discordapp.net/attachments/952160394191974430/1201340343862427758/IMG_20240129_001349.jpg?ex=65c97661&is=65b70161&hm=2cb4df3a71f4acef85aa9544e430a47f910f3ca36484783be93f24328893a3aa&=&format=webp&width=677&height=903");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        .gabe{
+            background-image: url("https://cats.com/wp-content/uploads/2023/04/Pregnant-Cat-Large-Belly.jpg");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        .zhonix{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeK3LtFuVKX82Gfu0cy8JK8kVnNwW6pozS_Q&usqp=CAU");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        .polis{
+            background-image: url("https://2.bp.blogspot.com/-jOtc-KREHjA/Tr_kAjZiejI/AAAAAAAAAq0/omcFwiHdm5M/s1600/Funny%2BFAT%2BPolice.jpg");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        .fat{
+            background-image: url("https://img.freepik.com/free-vector/hand-drawn-fat-person-cartoon-illustration_52683-117783.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705881600&semt=ais");
+            background-size: 100% 100%;
+            border-radius: 90px;
+            width: 80px;
+            height: 80px;
+            border: #e201a5 3px solid;
+        }
+
+        /* posts */
+        .post {
+            padding-top: 50px;
+            margin: 20px;
+            width: 500px;
+            /* border: 1px white solid; */
+            border-radius: 15px;
+            display: grid;
+        }
+
+        .post .content {
+            width: 500px;
+        }
+
+        .post-bypass {
+            width: 40px;
+            height: 40px;
+        }
+
+        .post-user {
+            display: grid;
+            grid-template-columns: 1fr 99fr;
+            gap: 10px;
+            line-height: 44px;
+        }
+
+        .post-user-2 {
+            display: grid;
+            grid-template-columns: 1fr 99fr;
+            gap: 10px;
+            line-height: 22px;
+        }
+
+        .time {
+            color: rgb(163, 163, 163);
+        }
+
+        .buttons {
+            font-size: 150%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 210fr 1fr;
+            padding-top: 15px;
+            gap: 20px;
+        }
+
+        .tag {
+            color: rgb(134, 134, 239)
+        }
+    </style>
+    <body>
+        <div class="outer-container">
+            <div class="side">
+                <span class="menu-main">FRESH FOOD</span><br><br>
+                <ul>
+                    <li><i class="fi fi-rr-home"></i> &nbsp;&nbsp; <span>home</span></li>
+                    <li><i class="fi fi-rs-shopping-cart"></i> &nbsp;&nbsp; <span>buy</span></li>
+                    <li><i class="fi fi-rr-paper-plane"></i> &nbsp;&nbsp; <span>chat</span></li>
+                    <li><i class="fi fi-rs-edit"></i> &nbsp;&nbsp; <span>create</span></li>
+                </ul>
+            </div>
+            <div> </div>
+            <div class="container">
+                <div class="middle">
+                    <div class="story">
+                        <div><img class="mochi"><br><span>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></span></div>
+                        <div><img class="faust"><br><span>xxxfaustxxx <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></span></div>
+                        <div><img class="gabe"><br><span>gabe2k24 <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></span></div>
+                        <div><img class="zhonix"><br><span>zhonix</span></div>
+                        <div><img class="polis"><br><span>polis <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></span></div>
+                        <div><img class="fat"><br><span>niko</span></div>
+                    </div>
+                    <div>
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 3h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1197583213514727504/20240117_152027.jpg?ex=65c505c8&is=65b290c8&hm=d02a2a08fe56c9911a64f53abaf4747f57809a7d1de24ed7455d7308ead507ff&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>want more? visit my onlyfans</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 4h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1197583693598969946/20231216_125947.jpg?ex=65c5063a&is=65b2913a&hm=195bd0899692612d1751a9447740138f39dd85c1a1698241a1347ed1a63aa908&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>my ding dong is hard for your ching chong</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="gabe post-bypass">
+                                <div><b>gabe2k24 <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 6h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1197859065032867940/rn_image_picker_lib_temp_42f209f8-a2c7-48d1-b036-466911beb9b7.jpg?ex=65c606b0&is=65b391b0&hm=e0152a2ce1dc80dd0b6c44305caeb9082a792aea6fbed393646eebf3c5debf07&=&format=webp&width=903&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>gabe</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="gabe post-bypass">
+                                <div><b>gabe2k24 <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 6h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1199304025624023062/f596f64e-37de-43c8-b097-ae5ab053a15b.jpg?ex=65c20de9&is=65af98e9&hm=dabb8eafedc4f8bdd8e4ac1d45999e8876b45aa4d2de209796ed61667fadff98&=&format=webp&width=903&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>i love my wife</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="zhonix post-bypass">
+                                <div><b>zhonix</b><span class="time"> • 6h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1199388537548710028/image_6.png?ex=65c25c9e&is=65afe79e&hm=542fddcad7a736f54f3e6dbd5ed47666a5fda76ee1b029bf5ac5f2abb009ac37&=&format=webp&quality=lossless&width=533&height=688">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>i, zhonix. <span class="tag">#2</span></div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="faust post-bypass">
+                                <div><b>xxxfaustxxx <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 6h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1199671789001916416/IMG_20240124_190600.jpg?ex=65c3646b&is=65b0ef6b&hm=51b9be4e70156ab562daf73285eab5ceba83413c1f26cfd0c1de575874f2399e&=&format=webp&width=1204&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>eepy car</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="faust post-bypass">
+                                <div><b>xxxfaustxxx <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 7h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200108311475933314/IMG_20240125_235611.jpg?ex=65c4faf6&is=65b285f6&hm=709f4ca1c92d37ff23e28ebd5a64e84ba1002a9d50aa7479fbc9458b816589c2&=&format=webp&width=1204&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>cute cat 😻</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="zhonix post-bypass">
+                                <div><b>zhonix</b><span class="time"> • 7h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200113518045843576/4985.jpg?ex=65c4ffcf&is=65b28acf&hm=e91fb1a52105df4e7088813a4785571fe4788affd86ce270d68c35557bebba84&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>zhonix. <span class="tag">#1</span></div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 8h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200115058672410685/IMG_0215.jpg?ex=65c5013f&is=65b28c3f&hm=0e8f9fd64ff1c0ac40b4a9eb7581ac46a487e746151819308590a50f8e8872f0&=&format=webp&width=1204&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>dinner is servedddd</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 8h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200115996149682237/IMG_0712.jpg?ex=65c5021e&is=65b28d1e&hm=ab72495fc70cf54b5aeaafd6c16ee8171cbeddadfd199af90586aa9804004b98&=&format=webp&width=1204&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>im okay</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 9h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200117663851094126/IMG_1089.jpg?ex=65c503ac&is=65b28eac&hm=a0018a7c537a54b7dd04b962ef3a2ca1f519996fef37166cb8a89236f14786e7&=&format=webp&width=1204&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>nice balls</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 10h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200280642831781999/20240126_112623.jpg?ex=65c59b75&is=65b32675&hm=ecafd1ee86a01f998d79fa03915fee601c9fbff870d371e0145a06184185cf79&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>rip</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 11h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200797298184171581/20240127_193239.jpg?ex=65c77ca1&is=65b507a1&hm=490de4b39f105e90c032449576f4e0eaa2c194698d232f2dc3b92bd9eea2d8e0&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>*licks*</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 12h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1200798616978202704/20240127_193403.jpg?ex=65c77ddc&is=65b508dc&hm=e10844e269d312db9c9001962fb2db422b3819da74b46a1d0886367475f664b5&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>nice feet bitch</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="faust post-bypass">
+                                <div><b>xxxfaustxxx <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 41h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1201340345343037490/IMG_20240129_001307.jpg?ex=65c97662&is=65b70162&hm=867cef4dabe6fb226b02a818b5731388bf87f8ccaacd1f3a98c7ec20b80cffaf&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i> 
+                            </div>
+                            <div>FAUST FREE HOTDOGS OMG</div>
+                        </div>
+
+                        <div class="post">
+                            <div class="post-user">
+                                <img class="mochi post-bypass">
+                                <div><b>mochi <i class="fi fi-rs-check-circle" style="color: rgb(50, 187, 255); font-size: 70%;"></i></b><span class="time"> • 69h</span></div>
+                            </div><br>
+                            <div>
+                                <img class="content" src="https://media.discordapp.net/attachments/952160394191974430/1201388720574709770/mmexport1706354025762.jpg?ex=65c9a36f&is=65b72e6f&hm=734351c646a4ae31c89dfb3ff951bdc5bbf736d9d224635ba35fd6afa41affc5&=&format=webp&width=677&height=903">
+                            </div>
+                            <div class="buttons">
+                                <i class="fi fi-rs-heart"></i> <i class="fi fi-rr-comment-alt-middle"></i> <i class="fi fi-rr-share-square"></i> <span></span> <i class="fi fi-rr-bookmark"></i>
+                            </div>
+                            <div>dog</div>
+                        </div>
+                        <div style="color: rgb(108, 108, 108); padding: 200px;">you reached the end 💔</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
